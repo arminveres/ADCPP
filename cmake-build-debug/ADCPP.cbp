@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/arminveres/GitHubFiles/ADCPP/Exercise_01/fraction.cpp">
+			<Option target="ADCPP"/>
+		</Unit>
 		<Unit filename="/home/arminveres/GitHubFiles/ADCPP/Exercise_01/helloWorld.cpp">
 			<Option target="ADCPP"/>
 		</Unit>

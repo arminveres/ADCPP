@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(ADCPP
         Exercise_01/helloWorld.cpp
-        Exercise_01/txtConverter.cpp)
+        Exercise_01/txtConverter.cpp
+        Exercise_01/fraction.cpp)

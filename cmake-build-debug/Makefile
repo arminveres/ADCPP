@@ -129,6 +129,30 @@ ADCPP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/build
 .PHONY : ADCPP/fast
 
+Exercise_01/fraction.o: Exercise_01/fraction.cpp.o
+.PHONY : Exercise_01/fraction.o
+
+# target to build an object file
+Exercise_01/fraction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.o
+.PHONY : Exercise_01/fraction.cpp.o
+
+Exercise_01/fraction.i: Exercise_01/fraction.cpp.i
+.PHONY : Exercise_01/fraction.i
+
+# target to preprocess a source file
+Exercise_01/fraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.i
+.PHONY : Exercise_01/fraction.cpp.i
+
+Exercise_01/fraction.s: Exercise_01/fraction.cpp.s
+.PHONY : Exercise_01/fraction.s
+
+# target to generate assembly for a file
+Exercise_01/fraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.s
+.PHONY : Exercise_01/fraction.cpp.s
+
 Exercise_01/helloWorld.o: Exercise_01/helloWorld.cpp.o
 .PHONY : Exercise_01/helloWorld.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ADCPP"
+	@echo "... Exercise_01/fraction.o"
+	@echo "... Exercise_01/fraction.i"
+	@echo "... Exercise_01/fraction.s"
 	@echo "... Exercise_01/helloWorld.o"
 	@echo "... Exercise_01/helloWorld.i"
 	@echo "... Exercise_01/helloWorld.s"

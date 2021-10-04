@@ -20,20 +20,20 @@ int main(int argc, char *argv[])
     ifstream ifs(argv[1]);
     ofstream ofs(argv[2]);
     char c;
-    bool read(false);
+    bool skip(false);
 
     while (true) {
         ifs.get(c);
         if (!ifs.good()) break;
-//      since it's converting, if there's a \r the bool flag read will be set for the following loop
+//      since it's converting, if there's a \r the bool flag skip will be set for the following loop
 //      to insert only a \n. This should circumvent any incorrectly formatted text files
         if (c == '\r') {
             ofs << "";
-            read = true;
+            skip = true;
         }
-        else if (c == '\n' && read) {
+        else if (c == '\n' && skip) {
             ofs << "\n";
-            read = false;
+            skip = false;
         }
         else if (c == '\n') ofs << "\r\n";
         else ofs << c;

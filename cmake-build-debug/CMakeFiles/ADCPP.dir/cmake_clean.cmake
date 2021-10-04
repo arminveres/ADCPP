@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "ADCPP"
   "ADCPP.pdb"
+  "CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.o"
   "CMakeFiles/ADCPP.dir/Exercise_01/helloWorld.cpp.o"
   "CMakeFiles/ADCPP.dir/Exercise_01/txtConverter.cpp.o"
 )
