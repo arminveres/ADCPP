@@ -117,24 +117,76 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ADCPP
+# Target rules for targets named hw
 
 # Build rule for target.
-ADCPP: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ADCPP
-.PHONY : ADCPP
+hw: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hw
+.PHONY : hw
 
 # fast build rule for target.
-ADCPP/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/build
-.PHONY : ADCPP/fast
+hw/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/build
+.PHONY : hw/fast
+
+#=============================================================================
+# Target rules for targets named txt
+
+# Build rule for target.
+txt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 txt
+.PHONY : txt
+
+# fast build rule for target.
+txt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/build
+.PHONY : txt/fast
+
+#=============================================================================
+# Target rules for targets named frac
+
+# Build rule for target.
+frac: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 frac
+.PHONY : frac
+
+# fast build rule for target.
+frac/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/build
+.PHONY : frac/fast
+
+#=============================================================================
+# Target rules for targets named revPol
+
+# Build rule for target.
+revPol: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 revPol
+.PHONY : revPol
+
+# fast build rule for target.
+revPol/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/build
+.PHONY : revPol/fast
+
+#=============================================================================
+# Target rules for targets named spellCheck
+
+# Build rule for target.
+spellCheck: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spellCheck
+.PHONY : spellCheck
+
+# fast build rule for target.
+spellCheck/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/build
+.PHONY : spellCheck/fast
 
 Exercise_01/fraction.o: Exercise_01/fraction.cpp.o
 .PHONY : Exercise_01/fraction.o
 
 # target to build an object file
 Exercise_01/fraction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/fraction.cpp.o
 .PHONY : Exercise_01/fraction.cpp.o
 
 Exercise_01/fraction.i: Exercise_01/fraction.cpp.i
@@ -142,7 +194,7 @@ Exercise_01/fraction.i: Exercise_01/fraction.cpp.i
 
 # target to preprocess a source file
 Exercise_01/fraction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/fraction.cpp.i
 .PHONY : Exercise_01/fraction.cpp.i
 
 Exercise_01/fraction.s: Exercise_01/fraction.cpp.s
@@ -150,7 +202,7 @@ Exercise_01/fraction.s: Exercise_01/fraction.cpp.s
 
 # target to generate assembly for a file
 Exercise_01/fraction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/fraction.cpp.s
 .PHONY : Exercise_01/fraction.cpp.s
 
 Exercise_01/helloWorld.o: Exercise_01/helloWorld.cpp.o
@@ -158,7 +210,7 @@ Exercise_01/helloWorld.o: Exercise_01/helloWorld.cpp.o
 
 # target to build an object file
 Exercise_01/helloWorld.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/helloWorld.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/helloWorld.cpp.o
 .PHONY : Exercise_01/helloWorld.cpp.o
 
 Exercise_01/helloWorld.i: Exercise_01/helloWorld.cpp.i
@@ -166,7 +218,7 @@ Exercise_01/helloWorld.i: Exercise_01/helloWorld.cpp.i
 
 # target to preprocess a source file
 Exercise_01/helloWorld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/helloWorld.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/helloWorld.cpp.i
 .PHONY : Exercise_01/helloWorld.cpp.i
 
 Exercise_01/helloWorld.s: Exercise_01/helloWorld.cpp.s
@@ -174,15 +226,66 @@ Exercise_01/helloWorld.s: Exercise_01/helloWorld.cpp.s
 
 # target to generate assembly for a file
 Exercise_01/helloWorld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/helloWorld.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/helloWorld.cpp.s
 .PHONY : Exercise_01/helloWorld.cpp.s
+
+Exercise_01/revPolCalc.o: Exercise_01/revPolCalc.cpp.o
+.PHONY : Exercise_01/revPolCalc.o
+
+# target to build an object file
+Exercise_01/revPolCalc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/revPolCalc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/revPolCalc.cpp.o
+.PHONY : Exercise_01/revPolCalc.cpp.o
+
+Exercise_01/revPolCalc.i: Exercise_01/revPolCalc.cpp.i
+.PHONY : Exercise_01/revPolCalc.i
+
+# target to preprocess a source file
+Exercise_01/revPolCalc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/revPolCalc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/revPolCalc.cpp.i
+.PHONY : Exercise_01/revPolCalc.cpp.i
+
+Exercise_01/revPolCalc.s: Exercise_01/revPolCalc.cpp.s
+.PHONY : Exercise_01/revPolCalc.s
+
+# target to generate assembly for a file
+Exercise_01/revPolCalc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/revPolCalc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/revPolCalc.cpp.s
+.PHONY : Exercise_01/revPolCalc.cpp.s
+
+Exercise_01/simpleSpellChecker.o: Exercise_01/simpleSpellChecker.cpp.o
+.PHONY : Exercise_01/simpleSpellChecker.o
+
+# target to build an object file
+Exercise_01/simpleSpellChecker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/simpleSpellChecker.cpp.o
+.PHONY : Exercise_01/simpleSpellChecker.cpp.o
+
+Exercise_01/simpleSpellChecker.i: Exercise_01/simpleSpellChecker.cpp.i
+.PHONY : Exercise_01/simpleSpellChecker.i
+
+# target to preprocess a source file
+Exercise_01/simpleSpellChecker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/simpleSpellChecker.cpp.i
+.PHONY : Exercise_01/simpleSpellChecker.cpp.i
+
+Exercise_01/simpleSpellChecker.s: Exercise_01/simpleSpellChecker.cpp.s
+.PHONY : Exercise_01/simpleSpellChecker.s
+
+# target to generate assembly for a file
+Exercise_01/simpleSpellChecker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/simpleSpellChecker.cpp.s
+.PHONY : Exercise_01/simpleSpellChecker.cpp.s
 
 Exercise_01/txtConverter.o: Exercise_01/txtConverter.cpp.o
 .PHONY : Exercise_01/txtConverter.o
 
 # target to build an object file
 Exercise_01/txtConverter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/txtConverter.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/txtConverter.cpp.o
 .PHONY : Exercise_01/txtConverter.cpp.o
 
 Exercise_01/txtConverter.i: Exercise_01/txtConverter.cpp.i
@@ -190,7 +293,7 @@ Exercise_01/txtConverter.i: Exercise_01/txtConverter.cpp.i
 
 # target to preprocess a source file
 Exercise_01/txtConverter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/txtConverter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/txtConverter.cpp.i
 .PHONY : Exercise_01/txtConverter.cpp.i
 
 Exercise_01/txtConverter.s: Exercise_01/txtConverter.cpp.s
@@ -198,7 +301,7 @@ Exercise_01/txtConverter.s: Exercise_01/txtConverter.cpp.s
 
 # target to generate assembly for a file
 Exercise_01/txtConverter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ADCPP.dir/build.make CMakeFiles/ADCPP.dir/Exercise_01/txtConverter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/txtConverter.cpp.s
 .PHONY : Exercise_01/txtConverter.cpp.s
 
 # Help Target
@@ -209,13 +312,23 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... ADCPP"
+	@echo "... frac"
+	@echo "... hw"
+	@echo "... revPol"
+	@echo "... spellCheck"
+	@echo "... txt"
 	@echo "... Exercise_01/fraction.o"
 	@echo "... Exercise_01/fraction.i"
 	@echo "... Exercise_01/fraction.s"
 	@echo "... Exercise_01/helloWorld.o"
 	@echo "... Exercise_01/helloWorld.i"
 	@echo "... Exercise_01/helloWorld.s"
+	@echo "... Exercise_01/revPolCalc.o"
+	@echo "... Exercise_01/revPolCalc.i"
+	@echo "... Exercise_01/revPolCalc.s"
+	@echo "... Exercise_01/simpleSpellChecker.o"
+	@echo "... Exercise_01/simpleSpellChecker.i"
+	@echo "... Exercise_01/simpleSpellChecker.s"
 	@echo "... Exercise_01/txtConverter.o"
 	@echo "... Exercise_01/txtConverter.i"
 	@echo "... Exercise_01/txtConverter.s"

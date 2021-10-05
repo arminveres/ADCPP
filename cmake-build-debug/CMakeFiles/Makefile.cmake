@@ -46,5 +46,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/ADCPP.dir/DependInfo.cmake"
+  "CMakeFiles/hw.dir/DependInfo.cmake"
+  "CMakeFiles/txt.dir/DependInfo.cmake"
+  "CMakeFiles/frac.dir/DependInfo.cmake"
+  "CMakeFiles/revPol.dir/DependInfo.cmake"
+  "CMakeFiles/spellCheck.dir/DependInfo.cmake"
   )
