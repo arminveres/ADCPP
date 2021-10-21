@@ -55,8 +55,9 @@ public:
 
     void printVector() {
         for (auto el : v) {
-            std::cout << el << std::endl;
+            std::cout << el << "\t";
         }
+        std::cout << std::endl;
     }
 
 };
