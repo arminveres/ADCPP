@@ -3,5 +3,7 @@
 /home/arminveres/GitHubFiles/ADCPP/cmake-build-debug/CMakeFiles/hw.dir
 /home/arminveres/GitHubFiles/ADCPP/cmake-build-debug/CMakeFiles/txt.dir
 /home/arminveres/GitHubFiles/ADCPP/cmake-build-debug/CMakeFiles/frac.dir
+/home/arminveres/GitHubFiles/ADCPP/cmake-build-debug/CMakeFiles/revPolTemp.dir
+/home/arminveres/GitHubFiles/ADCPP/cmake-build-debug/CMakeFiles/pvector.dir
 /home/arminveres/GitHubFiles/ADCPP/cmake-build-debug/CMakeFiles/revPol.dir
 /home/arminveres/GitHubFiles/ADCPP/cmake-build-debug/CMakeFiles/spellCheck.dir

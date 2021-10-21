@@ -36,14 +36,14 @@ int main()
                     break;
                 }
                 case 'q': {
-                    argsStream >> ch;
+//                    argsStream >> ch;
                     cout << "quitting..." << endl;
                     isRunning = false;
                     break;
                 }
                 case 'd': {
                     if (curr >= begin(stack)) {
-                        argsStream >> ch;
+//                        argsStream >> ch;
                         stack.pop_back();
                         curr = end(stack) - 1;
                     } else {
@@ -53,7 +53,7 @@ int main()
                 }
                 case '+': {
                     if (curr != begin(stack)) {
-						argsStream >> ch;
+//						argsStream >> ch;
 						cout << "operation: " << ch << endl;
 
                         stack.pop_back();  
@@ -71,7 +71,7 @@ int main()
                 }
                 case '-': {
                     if (curr != begin(stack)) {
-						argsStream >> ch;
+//						argsStream >> ch;
 						cout << "operation: " << ch << endl;
                         stack.pop_back();  
                         stack.pop_back();
@@ -88,7 +88,7 @@ int main()
                 }
                 case '*': {
                     if (curr != begin(stack)) {
-						argsStream >> ch;
+//						argsStream >> ch;
 						cout << "operation: " << ch << endl;
 
                         stack.pop_back();  
@@ -106,7 +106,7 @@ int main()
                 }
                 case '/': {
                     if (curr != begin(stack)) {
-						argsStream >> ch;
+//						argsStream >> ch;
 						cout << "operation: " << ch << endl;
 
                         stack.pop_back();  
