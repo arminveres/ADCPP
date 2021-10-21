@@ -156,6 +156,32 @@ frac/fast:
 .PHONY : frac/fast
 
 #=============================================================================
+# Target rules for targets named revPolTemp
+
+# Build rule for target.
+revPolTemp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 revPolTemp
+.PHONY : revPolTemp
+
+# fast build rule for target.
+revPolTemp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPolTemp.dir/build.make CMakeFiles/revPolTemp.dir/build
+.PHONY : revPolTemp/fast
+
+#=============================================================================
+# Target rules for targets named pvector
+
+# Build rule for target.
+pvector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pvector
+.PHONY : pvector
+
+# fast build rule for target.
+pvector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pvector.dir/build.make CMakeFiles/pvector.dir/build
+.PHONY : pvector/fast
+
+#=============================================================================
 # Target rules for targets named revPol
 
 # Build rule for target.
@@ -181,128 +207,197 @@ spellCheck/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/build
 .PHONY : spellCheck/fast
 
-Exercise_01/fraction.o: Exercise_01/fraction.cpp.o
-.PHONY : Exercise_01/fraction.o
+Exercise_01/L1.1_helloWorld.o: Exercise_01/L1.1_helloWorld.cpp.o
+.PHONY : Exercise_01/L1.1_helloWorld.o
 
 # target to build an object file
-Exercise_01/fraction.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/fraction.cpp.o
-.PHONY : Exercise_01/fraction.cpp.o
+Exercise_01/L1.1_helloWorld.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/L1.1_helloWorld.cpp.o
+.PHONY : Exercise_01/L1.1_helloWorld.cpp.o
 
-Exercise_01/fraction.i: Exercise_01/fraction.cpp.i
-.PHONY : Exercise_01/fraction.i
+Exercise_01/L1.1_helloWorld.i: Exercise_01/L1.1_helloWorld.cpp.i
+.PHONY : Exercise_01/L1.1_helloWorld.i
 
 # target to preprocess a source file
-Exercise_01/fraction.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/fraction.cpp.i
-.PHONY : Exercise_01/fraction.cpp.i
+Exercise_01/L1.1_helloWorld.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/L1.1_helloWorld.cpp.i
+.PHONY : Exercise_01/L1.1_helloWorld.cpp.i
 
-Exercise_01/fraction.s: Exercise_01/fraction.cpp.s
-.PHONY : Exercise_01/fraction.s
+Exercise_01/L1.1_helloWorld.s: Exercise_01/L1.1_helloWorld.cpp.s
+.PHONY : Exercise_01/L1.1_helloWorld.s
 
 # target to generate assembly for a file
-Exercise_01/fraction.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/fraction.cpp.s
-.PHONY : Exercise_01/fraction.cpp.s
+Exercise_01/L1.1_helloWorld.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/L1.1_helloWorld.cpp.s
+.PHONY : Exercise_01/L1.1_helloWorld.cpp.s
 
-Exercise_01/helloWorld.o: Exercise_01/helloWorld.cpp.o
-.PHONY : Exercise_01/helloWorld.o
+Exercise_01/L1.1_txtConverter.o: Exercise_01/L1.1_txtConverter.cpp.o
+.PHONY : Exercise_01/L1.1_txtConverter.o
 
 # target to build an object file
-Exercise_01/helloWorld.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/helloWorld.cpp.o
-.PHONY : Exercise_01/helloWorld.cpp.o
+Exercise_01/L1.1_txtConverter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/L1.1_txtConverter.cpp.o
+.PHONY : Exercise_01/L1.1_txtConverter.cpp.o
 
-Exercise_01/helloWorld.i: Exercise_01/helloWorld.cpp.i
-.PHONY : Exercise_01/helloWorld.i
+Exercise_01/L1.1_txtConverter.i: Exercise_01/L1.1_txtConverter.cpp.i
+.PHONY : Exercise_01/L1.1_txtConverter.i
 
 # target to preprocess a source file
-Exercise_01/helloWorld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/helloWorld.cpp.i
-.PHONY : Exercise_01/helloWorld.cpp.i
+Exercise_01/L1.1_txtConverter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/L1.1_txtConverter.cpp.i
+.PHONY : Exercise_01/L1.1_txtConverter.cpp.i
 
-Exercise_01/helloWorld.s: Exercise_01/helloWorld.cpp.s
-.PHONY : Exercise_01/helloWorld.s
+Exercise_01/L1.1_txtConverter.s: Exercise_01/L1.1_txtConverter.cpp.s
+.PHONY : Exercise_01/L1.1_txtConverter.s
 
 # target to generate assembly for a file
-Exercise_01/helloWorld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hw.dir/build.make CMakeFiles/hw.dir/Exercise_01/helloWorld.cpp.s
-.PHONY : Exercise_01/helloWorld.cpp.s
+Exercise_01/L1.1_txtConverter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/L1.1_txtConverter.cpp.s
+.PHONY : Exercise_01/L1.1_txtConverter.cpp.s
 
-Exercise_01/revPolCalc.o: Exercise_01/revPolCalc.cpp.o
-.PHONY : Exercise_01/revPolCalc.o
+Exercise_01/L1.2_fraction.o: Exercise_01/L1.2_fraction.cpp.o
+.PHONY : Exercise_01/L1.2_fraction.o
 
 # target to build an object file
-Exercise_01/revPolCalc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/revPolCalc.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/revPolCalc.cpp.o
-.PHONY : Exercise_01/revPolCalc.cpp.o
+Exercise_01/L1.2_fraction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/L1.2_fraction.cpp.o
+.PHONY : Exercise_01/L1.2_fraction.cpp.o
 
-Exercise_01/revPolCalc.i: Exercise_01/revPolCalc.cpp.i
-.PHONY : Exercise_01/revPolCalc.i
+Exercise_01/L1.2_fraction.i: Exercise_01/L1.2_fraction.cpp.i
+.PHONY : Exercise_01/L1.2_fraction.i
 
 # target to preprocess a source file
-Exercise_01/revPolCalc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/revPolCalc.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/revPolCalc.cpp.i
-.PHONY : Exercise_01/revPolCalc.cpp.i
+Exercise_01/L1.2_fraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/L1.2_fraction.cpp.i
+.PHONY : Exercise_01/L1.2_fraction.cpp.i
 
-Exercise_01/revPolCalc.s: Exercise_01/revPolCalc.cpp.s
-.PHONY : Exercise_01/revPolCalc.s
+Exercise_01/L1.2_fraction.s: Exercise_01/L1.2_fraction.cpp.s
+.PHONY : Exercise_01/L1.2_fraction.s
 
 # target to generate assembly for a file
-Exercise_01/revPolCalc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/revPolCalc.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/revPolCalc.cpp.s
-.PHONY : Exercise_01/revPolCalc.cpp.s
+Exercise_01/L1.2_fraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/frac.dir/build.make CMakeFiles/frac.dir/Exercise_01/L1.2_fraction.cpp.s
+.PHONY : Exercise_01/L1.2_fraction.cpp.s
 
-Exercise_01/simpleSpellChecker.o: Exercise_01/simpleSpellChecker.cpp.o
-.PHONY : Exercise_01/simpleSpellChecker.o
+Exercise_01/L1.3_simpleSpellChecker.o: Exercise_01/L1.3_simpleSpellChecker.cpp.o
+.PHONY : Exercise_01/L1.3_simpleSpellChecker.o
 
 # target to build an object file
-Exercise_01/simpleSpellChecker.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/simpleSpellChecker.cpp.o
-.PHONY : Exercise_01/simpleSpellChecker.cpp.o
+Exercise_01/L1.3_simpleSpellChecker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/L1.3_simpleSpellChecker.cpp.o
+.PHONY : Exercise_01/L1.3_simpleSpellChecker.cpp.o
 
-Exercise_01/simpleSpellChecker.i: Exercise_01/simpleSpellChecker.cpp.i
-.PHONY : Exercise_01/simpleSpellChecker.i
+Exercise_01/L1.3_simpleSpellChecker.i: Exercise_01/L1.3_simpleSpellChecker.cpp.i
+.PHONY : Exercise_01/L1.3_simpleSpellChecker.i
 
 # target to preprocess a source file
-Exercise_01/simpleSpellChecker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/simpleSpellChecker.cpp.i
-.PHONY : Exercise_01/simpleSpellChecker.cpp.i
+Exercise_01/L1.3_simpleSpellChecker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/L1.3_simpleSpellChecker.cpp.i
+.PHONY : Exercise_01/L1.3_simpleSpellChecker.cpp.i
 
-Exercise_01/simpleSpellChecker.s: Exercise_01/simpleSpellChecker.cpp.s
-.PHONY : Exercise_01/simpleSpellChecker.s
+Exercise_01/L1.3_simpleSpellChecker.s: Exercise_01/L1.3_simpleSpellChecker.cpp.s
+.PHONY : Exercise_01/L1.3_simpleSpellChecker.s
 
 # target to generate assembly for a file
-Exercise_01/simpleSpellChecker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/simpleSpellChecker.cpp.s
-.PHONY : Exercise_01/simpleSpellChecker.cpp.s
+Exercise_01/L1.3_simpleSpellChecker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spellCheck.dir/build.make CMakeFiles/spellCheck.dir/Exercise_01/L1.3_simpleSpellChecker.cpp.s
+.PHONY : Exercise_01/L1.3_simpleSpellChecker.cpp.s
 
-Exercise_01/txtConverter.o: Exercise_01/txtConverter.cpp.o
-.PHONY : Exercise_01/txtConverter.o
+Exercise_01/L1.4_revPolCalc.o: Exercise_01/L1.4_revPolCalc.cpp.o
+.PHONY : Exercise_01/L1.4_revPolCalc.o
 
 # target to build an object file
-Exercise_01/txtConverter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/txtConverter.cpp.o
-.PHONY : Exercise_01/txtConverter.cpp.o
+Exercise_01/L1.4_revPolCalc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/L1.4_revPolCalc.cpp.o
+.PHONY : Exercise_01/L1.4_revPolCalc.cpp.o
 
-Exercise_01/txtConverter.i: Exercise_01/txtConverter.cpp.i
-.PHONY : Exercise_01/txtConverter.i
+Exercise_01/L1.4_revPolCalc.i: Exercise_01/L1.4_revPolCalc.cpp.i
+.PHONY : Exercise_01/L1.4_revPolCalc.i
 
 # target to preprocess a source file
-Exercise_01/txtConverter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/txtConverter.cpp.i
-.PHONY : Exercise_01/txtConverter.cpp.i
+Exercise_01/L1.4_revPolCalc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/L1.4_revPolCalc.cpp.i
+.PHONY : Exercise_01/L1.4_revPolCalc.cpp.i
 
-Exercise_01/txtConverter.s: Exercise_01/txtConverter.cpp.s
-.PHONY : Exercise_01/txtConverter.s
+Exercise_01/L1.4_revPolCalc.s: Exercise_01/L1.4_revPolCalc.cpp.s
+.PHONY : Exercise_01/L1.4_revPolCalc.s
 
 # target to generate assembly for a file
-Exercise_01/txtConverter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/txt.dir/build.make CMakeFiles/txt.dir/Exercise_01/txtConverter.cpp.s
-.PHONY : Exercise_01/txtConverter.cpp.s
+Exercise_01/L1.4_revPolCalc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPol.dir/build.make CMakeFiles/revPol.dir/Exercise_01/L1.4_revPolCalc.cpp.s
+.PHONY : Exercise_01/L1.4_revPolCalc.cpp.s
+
+Exercise_02/fraction.o: Exercise_02/fraction.cpp.o
+.PHONY : Exercise_02/fraction.o
+
+# target to build an object file
+Exercise_02/fraction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pvector.dir/build.make CMakeFiles/pvector.dir/Exercise_02/fraction.cpp.o
+.PHONY : Exercise_02/fraction.cpp.o
+
+Exercise_02/fraction.i: Exercise_02/fraction.cpp.i
+.PHONY : Exercise_02/fraction.i
+
+# target to preprocess a source file
+Exercise_02/fraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pvector.dir/build.make CMakeFiles/pvector.dir/Exercise_02/fraction.cpp.i
+.PHONY : Exercise_02/fraction.cpp.i
+
+Exercise_02/fraction.s: Exercise_02/fraction.cpp.s
+.PHONY : Exercise_02/fraction.s
+
+# target to generate assembly for a file
+Exercise_02/fraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pvector.dir/build.make CMakeFiles/pvector.dir/Exercise_02/fraction.cpp.s
+.PHONY : Exercise_02/fraction.cpp.s
+
+Exercise_02/pvector.o: Exercise_02/pvector.cpp.o
+.PHONY : Exercise_02/pvector.o
+
+# target to build an object file
+Exercise_02/pvector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pvector.dir/build.make CMakeFiles/pvector.dir/Exercise_02/pvector.cpp.o
+.PHONY : Exercise_02/pvector.cpp.o
+
+Exercise_02/pvector.i: Exercise_02/pvector.cpp.i
+.PHONY : Exercise_02/pvector.i
+
+# target to preprocess a source file
+Exercise_02/pvector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pvector.dir/build.make CMakeFiles/pvector.dir/Exercise_02/pvector.cpp.i
+.PHONY : Exercise_02/pvector.cpp.i
+
+Exercise_02/pvector.s: Exercise_02/pvector.cpp.s
+.PHONY : Exercise_02/pvector.s
+
+# target to generate assembly for a file
+Exercise_02/pvector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pvector.dir/build.make CMakeFiles/pvector.dir/Exercise_02/pvector.cpp.s
+.PHONY : Exercise_02/pvector.cpp.s
+
+Exercise_02/revPolTemplate.o: Exercise_02/revPolTemplate.cpp.o
+.PHONY : Exercise_02/revPolTemplate.o
+
+# target to build an object file
+Exercise_02/revPolTemplate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPolTemp.dir/build.make CMakeFiles/revPolTemp.dir/Exercise_02/revPolTemplate.cpp.o
+.PHONY : Exercise_02/revPolTemplate.cpp.o
+
+Exercise_02/revPolTemplate.i: Exercise_02/revPolTemplate.cpp.i
+.PHONY : Exercise_02/revPolTemplate.i
+
+# target to preprocess a source file
+Exercise_02/revPolTemplate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPolTemp.dir/build.make CMakeFiles/revPolTemp.dir/Exercise_02/revPolTemplate.cpp.i
+.PHONY : Exercise_02/revPolTemplate.cpp.i
+
+Exercise_02/revPolTemplate.s: Exercise_02/revPolTemplate.cpp.s
+.PHONY : Exercise_02/revPolTemplate.s
+
+# target to generate assembly for a file
+Exercise_02/revPolTemplate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/revPolTemp.dir/build.make CMakeFiles/revPolTemp.dir/Exercise_02/revPolTemplate.cpp.s
+.PHONY : Exercise_02/revPolTemplate.cpp.s
 
 # Help Target
 help:
@@ -314,24 +409,35 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... frac"
 	@echo "... hw"
+	@echo "... pvector"
 	@echo "... revPol"
+	@echo "... revPolTemp"
 	@echo "... spellCheck"
 	@echo "... txt"
-	@echo "... Exercise_01/fraction.o"
-	@echo "... Exercise_01/fraction.i"
-	@echo "... Exercise_01/fraction.s"
-	@echo "... Exercise_01/helloWorld.o"
-	@echo "... Exercise_01/helloWorld.i"
-	@echo "... Exercise_01/helloWorld.s"
-	@echo "... Exercise_01/revPolCalc.o"
-	@echo "... Exercise_01/revPolCalc.i"
-	@echo "... Exercise_01/revPolCalc.s"
-	@echo "... Exercise_01/simpleSpellChecker.o"
-	@echo "... Exercise_01/simpleSpellChecker.i"
-	@echo "... Exercise_01/simpleSpellChecker.s"
-	@echo "... Exercise_01/txtConverter.o"
-	@echo "... Exercise_01/txtConverter.i"
-	@echo "... Exercise_01/txtConverter.s"
+	@echo "... Exercise_01/L1.1_helloWorld.o"
+	@echo "... Exercise_01/L1.1_helloWorld.i"
+	@echo "... Exercise_01/L1.1_helloWorld.s"
+	@echo "... Exercise_01/L1.1_txtConverter.o"
+	@echo "... Exercise_01/L1.1_txtConverter.i"
+	@echo "... Exercise_01/L1.1_txtConverter.s"
+	@echo "... Exercise_01/L1.2_fraction.o"
+	@echo "... Exercise_01/L1.2_fraction.i"
+	@echo "... Exercise_01/L1.2_fraction.s"
+	@echo "... Exercise_01/L1.3_simpleSpellChecker.o"
+	@echo "... Exercise_01/L1.3_simpleSpellChecker.i"
+	@echo "... Exercise_01/L1.3_simpleSpellChecker.s"
+	@echo "... Exercise_01/L1.4_revPolCalc.o"
+	@echo "... Exercise_01/L1.4_revPolCalc.i"
+	@echo "... Exercise_01/L1.4_revPolCalc.s"
+	@echo "... Exercise_02/fraction.o"
+	@echo "... Exercise_02/fraction.i"
+	@echo "... Exercise_02/fraction.s"
+	@echo "... Exercise_02/pvector.o"
+	@echo "... Exercise_02/pvector.i"
+	@echo "... Exercise_02/pvector.s"
+	@echo "... Exercise_02/revPolTemplate.o"
+	@echo "... Exercise_02/revPolTemplate.i"
+	@echo "... Exercise_02/revPolTemplate.s"
 .PHONY : help
 
 

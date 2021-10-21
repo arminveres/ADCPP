@@ -33,3 +33,7 @@
 
 # vim files
 *~
+
+# IDE files
+.idea
+cmake-build-debug
