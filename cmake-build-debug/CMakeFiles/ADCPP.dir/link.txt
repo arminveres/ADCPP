@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/ADCPP.dir/Exercise_01/helloWorld.cpp.o CMakeFiles/ADCPP.dir/Exercise_01/txtConverter.cpp.o CMakeFiles/ADCPP.dir/Exercise_01/fraction.cpp.o -o ADCPP 
