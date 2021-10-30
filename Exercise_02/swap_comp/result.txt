@@ -1,0 +1,4 @@
+The result I got, is that there is no difference between the two functions on
+a technical perspective, as the probably do the same, as in the reference
+style swap just uses pointers to swap. In the end, the pointer swap is clearer
+to use, as it specifically needs pointers and won't work otherwise.
