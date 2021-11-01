@@ -13,7 +13,7 @@ template<typename T> class pVector {
     std::string filename;
     std::vector<T> v;
 
-    void readVector() {
+    void readSet() {
         std::ifstream ifs(filename);
         while (true) {
             T x;
@@ -23,7 +23,7 @@ template<typename T> class pVector {
         }
     }
 
-    void writeVector() {
+    void writeSet() {
         std::ofstream ofs(filename);
         if (ofs.is_open()) {
             for (const T &elem : v) {
@@ -34,7 +34,7 @@ template<typename T> class pVector {
 
 public:
     pVector(std::string fname) : filename(fname) {
-        readVector();
+        readSet();
     }
 
     typename std::vector<T>::iterator begin() {
