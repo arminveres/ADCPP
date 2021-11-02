@@ -5,8 +5,12 @@
 #ifndef ADCPP_SIMPLESPELLCHECKER_H
 #define ADCPP_SIMPLESPELLCHECKER_H
 
+#include "string"
+
+#include "../pVector/pset.h"
 
 class simplespellchecker {
+    pSet<std::string> dictionary;
 
 };
 

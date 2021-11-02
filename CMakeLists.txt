@@ -45,3 +45,6 @@ add_executable(rpn3
         Exercise_02/fraction.cpp
         Exercise_02/fraction.h)
 
+add_executable(spellchecker
+        Exercise_03/SpellChecker/simplespellchecker.cpp
+        Exercise_03/SpellChecker/simplespellchecker.h Exercise_03/SpellChecker/main.cpp)
