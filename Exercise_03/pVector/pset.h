@@ -43,7 +43,7 @@ public:
     typedef typename std::set<T>::iterator iterator;
 
     pSet(std::string fname) : filename(fname) {
-            readSet();
+        readSet();
     }
 
     ~pSet() {

@@ -28,7 +28,7 @@ template <>
 struct persistence_traits<std::string> {
 
     static void read(std::ifstream &ifs, std::string &elem) {
-        getline(ifs, elem);
+        std::getline(ifs, elem);
     }
 
     static void write(std::ofstream &ofs, const std::string &elem) {

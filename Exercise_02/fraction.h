@@ -6,6 +6,7 @@
 #define ADCPP_FRACTION_H
 
 #include <fstream>
+
 class fraction {
     int cntr;
     int denom;
@@ -21,12 +22,16 @@ public:
     void set_counter(int c);
     int get_denominator();
     void set_denominator(int d);
+
     fraction operator* (fraction b);
     fraction operator/ (fraction b);
     fraction operator+ (fraction b);
     fraction operator- (fraction b);
+
+    bool operator<(fraction b);
+    bool operator>(fraction b);
 };
-std::ostream &operator<<(std::ostream &os, fraction f);
-std::istream &operator>>(std::istream &is, fraction &f);
+//std::ostream &operator<<(std::ostream &os, fraction f);
+//std::istream &operator>>(std::istream &is, fraction &f);
 void check_char(std::istream &is, char ch);
 #endif //ADCPP_FRACTION_H

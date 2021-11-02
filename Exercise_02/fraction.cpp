@@ -65,6 +65,16 @@ fraction fraction::operator- (fraction b) {
     return retVal;
 }
 
+bool fraction::operator<(fraction b) {
+    int common = std::gcd(denom, b.denom);
+    return cntr * common / denom < b.cntr * denom / b.denom;
+}
+
+bool fraction::operator>(fraction b) {
+    int common = std::gcd(denom, b.denom);
+    return cntr * common / denom > b.cntr * denom / b.denom;
+}
+
 
 void check_char(std::istream &is, char ch) {
     char c;

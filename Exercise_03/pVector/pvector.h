@@ -18,7 +18,7 @@ class pVector {
     std::string filename;
     std::vector<T> v;
 
-    void readSet() {
+    void readVector() {
         std::ifstream ifs(filename);
         for (;;) {
             T elem;
@@ -29,7 +29,7 @@ class pVector {
 
     }
 
-    void writeSet() {
+    void writeVector() {
         std::ofstream ofs(filename);
         iterator first = v.begin(), last = v.end();
         while (first != last) {
@@ -42,11 +42,11 @@ public:
     typedef typename std::vector<T>::iterator iterator;
 
     pVector(std::string fname) : filename(fname) {
-        readSet();
+        readVector();
     }
 
     ~pVector() {
-        writeSet();
+        writeVector();
     }
 
 //    vector methods
@@ -59,12 +59,24 @@ public:
         return v.end();
     }
 
+    T back() {
+        return v.back();
+    }
+
     void push_back(const T &el) {
         v.push_back(el);
     }
 
     void pop_back() {
         v.pop_back();
+    }
+
+    int size() {
+        return v.size();
+    }
+
+    T at(int i) {
+        return v.at(i);
     }
 
     void printVector() {
