@@ -6,9 +6,10 @@
 #define ADCPP_HUMAN_PLAYER_H
 
 #include <iostream>
+#include "playfield.h"
 #include "playfield_traits.h"
 
-template<typename F>
+template<typename F=playfield>
 struct human_player {
     int id;
 

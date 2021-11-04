@@ -5,6 +5,7 @@
 #ifndef ADCPP_PLAYFIELD_TRAITS_H
 #define ADCPP_PLAYFIELD_TRAITS_H
 
+#include "playfield.h"
 
 template<typename F>
 struct playfield_traits {

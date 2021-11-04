@@ -6,9 +6,10 @@
 #define ADCPP_GAME_H
 
 #include <iostream>
+#include "playfield.h"
 #include "playfield_traits.h"
 
-template<typename F, typename P1, typename P2>
+template<typename P1, typename P2, typename F=playfield>
 struct game {
 
     F field;

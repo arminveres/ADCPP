@@ -53,4 +53,4 @@ add_executable(spellchecker2
 
 add_executable(connect4
         Exercise_03/connect4ai/playfield.cpp
-        Exercise_03/connect4ai/playfield.h Exercise_03/connect4ai/playfield_traits.h Exercise_03/connect4ai/game.h Exercise_03/connect4ai/main.cpp Exercise_03/connect4ai/human_player.h)
+        Exercise_03/connect4ai/playfield.h Exercise_03/connect4ai/playfield_traits.h Exercise_03/connect4ai/game.h Exercise_03/connect4ai/main.cpp Exercise_03/connect4ai/human_player.h Exercise_03/connect4ai/comp_player.h)
