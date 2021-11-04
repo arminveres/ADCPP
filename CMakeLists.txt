@@ -45,6 +45,12 @@ add_executable(rpn3
         Exercise_02/fraction.cpp
         Exercise_02/fraction.h)
 
-add_executable(spellchecker
+add_executable(spellchecker2
         Exercise_03/SpellChecker/simplespellchecker.cpp
-        Exercise_03/SpellChecker/simplespellchecker.h Exercise_03/SpellChecker/main.cpp)
+        Exercise_03/SpellChecker/simplespellchecker.h
+        Exercise_03/SpellChecker/main.cpp
+        Exercise_03/pVector/pset.h)
+
+add_executable(connect4
+        Exercise_03/connect4ai/playfield.cpp
+        Exercise_03/connect4ai/playfield.h Exercise_03/connect4ai/playfield_traits.h Exercise_03/connect4ai/game.h Exercise_03/connect4ai/main.cpp Exercise_03/connect4ai/human_player.h)

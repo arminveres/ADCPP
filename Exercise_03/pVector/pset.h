@@ -54,6 +54,10 @@ public:
         s.insert(el);
     }
 
+    int count(const T &el) {
+        return s.count(el);
+    }
+
     void printSet() {
         for (auto el : s) {
             std::cout << el << std::endl;

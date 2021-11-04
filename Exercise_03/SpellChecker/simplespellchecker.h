@@ -15,6 +15,8 @@
 class simplespellchecker {
 //    file gets initialized
     pSet<std::string> dictionary;
+//    a standard set for the ignored words
+    std::set<std::string> ignored;
 //    get file into filestream
     std::ifstream textIn;
 //    a vector with all the strings to be checked
@@ -22,9 +24,13 @@ class simplespellchecker {
 
 //    reads text into textToBeChecked
     void readText();
+//    check word for word
+    void checkText();
 
 public:
     simplespellchecker(std::string &dictPath, std::string &textPath);
+    ~simplespellchecker();
+
 };
 
 
