@@ -2,11 +2,11 @@
 // Created by arminveres on 10/4/21.
 //
 
-// converts unix style text files to MSDOS style and vice versa
+// converts unix style textToBeChecked files to MSDOS style and vice versa
 
 // Unix uses \n
 // MSDOS uses \r\n
-// dealing with incorr. formatted unix text files?
+// dealing with incorr. formatted unix textToBeChecked files?
 
 #include <fstream>
 #include <iostream>
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         ifs.get(c);
         if (!ifs.good()) break;
 //      since it's converting, if there's a \r the bool flag skip will be set for the following loop
-//      to insert only a \n. This should circumvent any incorrectly formatted text files
+//      to insert only a \n. This should circumvent any incorrectly formatted textToBeChecked files
         if (c == '\r') {
             ofs << "";
             skip = true;

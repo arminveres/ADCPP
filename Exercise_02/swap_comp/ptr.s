@@ -1,5 +1,5 @@
 	.file	"ptr_swap.cpp"
-	.text
+	.textToBeChecked
 	.globl	_Z6c_swapPiS_
 	.type	_Z6c_swapPiS_, @function
 _Z6c_swapPiS_:

@@ -1,5 +1,5 @@
 	.file	"ref_swap.cpp"
-	.text
+	.textToBeChecked
 	.globl	_Z4swapRiS_
 	.type	_Z4swapRiS_, @function
 _Z4swapRiS_:
