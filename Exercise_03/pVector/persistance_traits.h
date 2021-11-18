@@ -7,6 +7,7 @@
 
 #include "fstream"
 #include "string"
+#include <iostream>
 
 //  persistence traits for all cases
 template <typename T>

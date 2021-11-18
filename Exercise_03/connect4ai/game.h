@@ -6,6 +6,9 @@
 #define ADCPP_GAME_H
 
 #include <iostream>
+#include <chrono>
+#include <thread>
+
 #include "playfield.h"
 #include "playfield_traits.h"
 
@@ -28,6 +31,7 @@ public:
 
         while (playfield_traits<F>::is_not_full(field)) {
             field.print();
+	    std::this_thread::sleep_for(std::chrono::milliseconds(500));
             std::cout << "It is player " << current << "'s turn: ";
 
             if (current == F::player1) {
