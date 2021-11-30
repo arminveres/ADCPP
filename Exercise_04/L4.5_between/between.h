@@ -7,7 +7,7 @@
 template <typename Iter>
 bool __between(Iter first, Iter last, Iter item, std::forward_iterator_tag) {
     Iter curr = first;	
-    while (curr != last) {
+    while (curr != item) {
 	if (curr == last) return false;
 	++curr;
     }
