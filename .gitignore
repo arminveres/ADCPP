@@ -36,7 +36,10 @@
 
 # IDE files
 .idea
-cmake-build-debug
+cmake*
+CMakeCache.txt
+CMakeFiles
+Makefile
 
 # nvim files
 tags

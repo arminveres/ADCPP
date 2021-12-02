@@ -63,5 +63,13 @@ public:
             std::cout << el << std::endl;
         }
     }
+
+    iterator begin() {
+	return s.begin();
+    }
+
+    iterator end() {
+	return s.end();
+    }
 };
 #endif //ADCPP_PSET_H
