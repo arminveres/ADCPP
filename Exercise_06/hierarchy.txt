@@ -1,0 +1,25 @@
+collection
+	list
+		list
+		forward_list
+		vector
+		array
+	queue
+		dequeue
+	set
+		set
+		multiset
+		unordered_set
+		unordered_multiset
+	map
+		map
+		multimap
+		unordered_map
+		unordered_multimap
+
+Pro:
+would be nice, then similar to java one could use functions, such as shuffle
+and other functions from Collection
+
+Contra:
+would need to rewrite the some structures in case of Liskov
