@@ -5,7 +5,7 @@ using namespace std;
 // abstract class
 class Shape {
 public:
-    virtual int getArea() = 0;
+    virtual double getArea() = 0;
 };
 
 
@@ -17,28 +17,28 @@ public:
 
 class Square : public Shape {
 protected:
-    int height; 
+    double height; 
 
 public:
-    virtual int getArea() override {
+    virtual double getArea() override {
         return height*height;
     }
 
-    void setHeight(int h) {
+    void setHeight(double h) {
         height = h;
     }
 };
 
 class Rectangle : public Square {
 protected:
-    int width;
+    double width;
 
 public:
-    virtual int getArea() override {
+    virtual double getArea() override {
         return height * width;
     }
 
-    void setWidth(int w) {
+    void setWidth(double w) {
         width = w;
     }
 };

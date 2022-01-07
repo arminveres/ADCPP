@@ -41,3 +41,9 @@ int main() {
     }
     std::cout << "It's a draw..." << std::endl;
 }
+// could add a player wrapper class
+template<typename *P>
+class player_wrapper : public player {
+
+    virtual int play()
+}
