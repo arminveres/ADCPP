@@ -32,6 +32,7 @@ fraction(int cntr = 0, int denom = 1);
 * goes into the header
 * useful for smaller functions
 * only a hint for the compiler, may decide against it
+* Compiler can only inline function if its implementation is visible, which is why inline func. go into header
 
 #### Constructor & Destructor
 * executed after memory allocation for object
@@ -172,7 +173,9 @@ sstream // string stream
 * Sequence Container Adapters
   * `stack<T,C>`
   * `queue<T,C>, priority_queue<T,C>`
+
 ##### Complexity Guarantees
+
 ![Complexity Guarantees](./images/compguar.jpg)
 
 ##### Iterators
@@ -253,8 +256,9 @@ const char *min<const char *>(const char *a, const char *b) {
 -------------------------------------------------------------
 #include "min.h"
 void foo(char *x, char *y, const char *z) {
-cout << min(x, y) << endl; // yes
-cout << min(x, z) << endl; // compiler error; there is no implicit parameter conversions for templates.
+cout << min(x, y) << endl;  // yes
+cout << min(x, z) << endl;  // compiler error; there is no implicit parameter
+                            // conversions for templates.
 cout << min<const char*>(x, z) << endl; // yes
 ```
 * before C++17 no template parameter deduction for constructors
@@ -300,6 +304,7 @@ In C++
   * **Constant Variables**
     * Declaration into header, if needed to be used elsewhere
     * Definition either into header (may be allocated multiple times, beware!) or into implementation file
+
 ```cpp
 // vars.h
 #ifndef VARS_H_
@@ -317,12 +322,14 @@ extern const int[] primes;
 int my_dumb_global_variable=17;
 const int primes[]={2, 3, 5, ..., 1234567891};
 ```
+
   * **Functions**
     * Decleration into header, definition into impl. file
   * **Inline Functions**
     * If to be inlined in impl. file only, treat like functions
     * If to be inlined globally (typically), decl. and def. into header
     * compiler has to know the impl. to be used instead of func. call
+
 ```cpp
 // util.h
 #ifndef UTIL_H_
@@ -349,6 +356,42 @@ int gcf(int a, int b) {
   return a;
 }
 ```
+
+  * **Types**
+    * Type declaration and definitions into header, layout needs to be known
+    * for member functions same rules as for functions
+
+```cpp
+// fraction.h
+class fraction {
+  int c; int d;
+ public:
+  fraction(int cntr=0, int denom=1) : c(cntr), d(denom) { /*void*/ }
+  fraction operator*(const fraction &b);
+  fraction operator/(fraction b) { // small implicit inline function
+    swap(b.c, b.d);
+    return (*this)*b;
+  }
+};
+
+// fraction.cc
+#include "fraction.h"
+#include "util.h"
+fraction::fraction operator*(const fraction &b) {
+  fraction r;
+  int f1=gcf(this->c,b.d), f2=gcf(b.c,this->d);
+  r.c=(this->c/f1)*(b.c/f2);
+  r.d=(this->d/f2)*(b.d/f1);
+  return r;
+}
+```
+
+  * **Templates**
+    * Decl. and Def. into header
+    * code is only generated when parametrized -> may look like  code but they are only definitions, from which code can be generated
+    * if template is only parametrized with small set of types:
+      * can treat template functions and template classes like normal functions and classes
+      * need to instantiate the class in an impl. file that has access to full templ. def. `template class pvector<string>;`
 * "nothing" that causes compiler to immediately generate code
 * except for small number of things
 * to prevent multiple inclusions:
@@ -362,4 +405,91 @@ int gcf(int a, int b) {
 #pragma once
 /* code */
 ```
+
+### Memory management
+* Built-in types and objects can be stored on stack and heap
+* Stack memory managed automatically
+* Heap memory needs to be allocated and freed explicitly
+* in C++ all parameters can be passed by value, pointer or reference
+
+#### Typical Memory Layout
+
+![a typical memory layout](./images/memlayout.jpg)
+
+#### The Stack
+* stores local variables, return addresses etc.
+
+#### Pointers (TYPE*)
+* should be used sparsely and carefully
+* since it can point to different types use -> TYPE*
+##### Pointer Operations
+* &-Operator:
+  * obtains address where value is tored (lvalue)
+  * returns a pointer to the type of lvale
+  * `&(lvalue)`
+* *-Operator:
+  * Dereference a pointer
+  * return the type of the value the pointer points to
+  * `*(expr)`
+
+```cpp
+void c_swap(int *x, int *y) {
+  int z = *x;
+  *x = *y;
+  *y = z;
+}
+
+int a=3, b=5;
+c_swap(&a, &b);
+```
+
+#### References (TYPE&)
+* refers to a value or object stored in memory, another name i.e. alias for a given value or object
+* it cannot be changed to refer to a different location
+* functions may also return References
+* allows the function to be used as lvalue:
+
+```cpp
+class fraction {
+ public:
+  // other functions
+  // conversion fraction to double
+  operator double() { return (double)c/d; }
+  // references as return value
+  int &counter() { return c; }
+  int &denominator() { return d; }
+};
+
+void normalize(fraction &a) {
+  int f = gcf(a.counter(), a.denominator());
+  a.counter() = a.counter() / f;
+  a.denominator() /= f;
+  // counter() and denominator() are now used as lvalues
+}
+```
+
+* same charactereristics as a pointer
+  * variable a reference points to should exist as long the reference itself
+  * never return a reference to a local variable, unless static
+  (but avoid static local variables, they are like global variables)
+* References are taken implicitly
+  * makes the code nicer to read but easy to overlook
+* Google Coding Style suggests avoiding references as return values
+and instead stick to pointers
+
+#### Commonly Used (Safe) Patterns
+* Function references elements passed by caller
+  * `swap(int &a, int &b)`
+    * if a and b are valid in caller scope, they 'must be' valid in callee's scope
+    * make sure it is obvious to caller that a and b might be changed
+  * `print_vector(const vector<string> &v)`
+    * with const we promise not to change v
+    * avoids duplication of v
+* Function return reference to element passed to it
+  * `ostream &operator<<(ostream &os, const T &element)`
+    * same arg. as above, we return to caller a reference to an object
+* Member function return reference to elem. of its class
+  * `int &fraction::counter()`
+  * ` T &vector::operator[](size_t index)`
+    * this is implicitly passed to member function
 
