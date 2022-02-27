@@ -44,6 +44,5 @@ int main() {
 // could add a player wrapper class
 template<typename *P>
 class player_wrapper : public player {
-
-    virtual int play()
-}
+    virtual int play();
+};

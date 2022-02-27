@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <set>
 #include <iostream>
+#include <map>
 
 #include "mergecont_traits.h"
 
