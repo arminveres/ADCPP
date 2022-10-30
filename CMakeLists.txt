@@ -25,6 +25,7 @@ add_executable(pvector1
         Exercise_02/fraction.h)
 
 add_executable(revPolTemp
+        Exercise_02/fraction.cpp
         Exercise_02/revPolTemplate.cpp)
 
 add_executable(pvector2

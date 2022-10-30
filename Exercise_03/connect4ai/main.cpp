@@ -1,6 +1,4 @@
-//
-// Created by arminveres on 11/4/21.
-//
+// Created based on JaanWili's connect4
 
 #include "game.h"
 #include "comp_player.h"

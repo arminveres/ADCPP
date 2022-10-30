@@ -43,3 +43,4 @@ Makefile
 
 # nvim files
 tags
+build
